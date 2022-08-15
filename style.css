@@ -1,10 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Roboto:wght@400;500;700;900&display=swap");
-
 * {
+  font-family: "Inter", sans-serif;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
 }
 
 .white__1 {
@@ -19,13 +17,7 @@
   color: #6415ff;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-span {
+h1, h2, h3, h4, h5, h6, span {
   color: #242424;
   text-align: center;
   line-height: 1.25;
@@ -89,70 +81,6 @@ button {
 
 .about--us__email--button__container {
   display: none;
-}
-
-.navbar__menu--backdrop {
-  visibility: hidden;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: 24px 16px;
-  display: flex;
-  max-height: 400px;
-  z-index: 3;
-  background-color: #fff;
-  border-radius: 8px;
-  border: 1px solid #e5e7eb;
-  flex-direction: column;
-  align-items: center;
-  padding: 24px;
-  transition: all 500ms ease;
-  opacity: 0;
-}
-
-.navbar__menu--backdrop--item {
-  margin: 26px 0;
-  text-align: center;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.navbar__menu--item--text {
-  font-size: 18px !important;
-  margin: 0 !important;
-  font-weight: 600 !important;
-  color: black;
-  text-align: center !important;
-}
-
-.navbar__menu--backdrop--button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0;
-  border: 0;
-  background-color: transparent;
-  color: #6415ff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: translate(-15px, 25px);
-}
-
-.menu--open .navbar__menu--backdrop--item {
-  visibility: visible;
-  opacity: 1;
-}
-
-.menu--open .navbar__menu--backdrop {
-  visibility: visible;
-  opacity: 1;
-}
-
-.navbar__menu--links {
-  display: none !important;
 }
 
 #root {
@@ -277,6 +205,74 @@ button {
   color: #fff;
   border-radius: 50px;
 }
+
+
+/* NAVIGATION BAR MENU  */
+
+.navbar__menu--backdrop {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 24px 16px;
+  display: flex;
+  max-height: 400px;
+  z-index: 3;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  transition: all 500ms ease;
+  opacity: 0;
+}
+
+.navbar__menu--backdrop--item {
+  margin: 26px 0;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.navbar__menu--item--text {
+  font-size: 18px !important;
+  margin: 0 !important;
+  font-weight: 600 !important;
+  color: black;
+  text-align: center !important;
+}
+
+.navbar__menu--backdrop--button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  color: #6415ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-15px, 25px);
+}
+
+.menu--open .navbar__menu--backdrop--item {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu--open .navbar__menu--backdrop {
+  visibility: visible;
+  opacity: 1;
+}
+
+.navbar__menu--links {
+  display: none !important;
+}
+
 
 /* ABOUT US */
 
@@ -1188,15 +1184,10 @@ button {
   display: flex;
 }
 
-/* I'm not sure how I've completed this but I did  */
 
-@media (max-width: 768px) {
-  .about--us--header {
-    font-size: 30px;
-  }
-
-  .two--column {
-    flex-direction: column;
+@media (max-width: 1024px){
+  .navbar__menu--button{
+    display: flex;
   }
 
   .nav__links {
@@ -1205,6 +1196,17 @@ button {
 
   .navbar__menu {
     display: flex;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .about--us--header {
+    font-size: 30px;
+  }
+
+  .two--column {
+    flex-direction: column;
   }
 
   .pricing__pannels--container {
@@ -1592,9 +1594,6 @@ button {
     margin-top: 32px;
   }
 
-  .navbar__menu--button {
-    display: flex;
-  }
 
   .about--us__email--button__container {
     display: block;
